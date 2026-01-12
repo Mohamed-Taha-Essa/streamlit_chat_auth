@@ -1,0 +1,6 @@
+#gitignore file for python 
+__pycache__
+.env    
+
+#streamlit 
+.streamlit
