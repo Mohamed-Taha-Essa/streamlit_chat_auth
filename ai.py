@@ -3,14 +3,15 @@ import os
 from langchain_huggingface import HuggingFaceEndpoint ,ChatHuggingFace
 from langchain_core.prompts import ChatPromptTemplate,MessagesPlaceholder
 from langchain_core.runnables import RunnableWithMessageHistory
+from dotenv import load_dotenv
 
+load_dotenv()
 
 SYSTEM_PROMPT= "You are a helpfull assistant"
 
 
 #initialize the chat model
 hugging_face_api_key = os.getenv('hugging_face_api_key')
-print(hugging_face_api_key)
 
 llm = HuggingFaceEndpoint(
     repo_id="EssentialAI/rnj-1-instruct",
